@@ -17,8 +17,8 @@
     
     <div class="row m-3">
         <div class="col">
-            <div class="d-flex justify-content-between">
-                <div class="col-sm-3">
+            <!-- <div class="d-flex justify-content-between"> -->
+                <!-- <div class="col-sm-3">
                     <label class="visually-hidden" for="specificSizeSelect">Preference</label>
                     <select class="form-select" id="specificSizeSelect">
                       <option selected>Choose...</option>
@@ -26,24 +26,31 @@
                       <option value="java">Java</option>
                       <option value="js">JavaScript</option>
                     </select>
-                </div>
-                <div>
-                    <button type="button" class="btn btn-success">Run</button>
-                </div>
-            </div>
-            
-            <textarea type="text" id="codeArea" class="form-control" aria-label="First name"></textarea>
+                </div> -->
+                <!-- <div>
+                    <button type="button" id="run" class="btn btn-success">Run</button>
+                </div> -->
+            <!-- </div> -->
+            <form action="/compile" method="post">
+                <textarea type="text" id="codeArea" name="code" class="form-control" aria-label="First name"></textarea>
+                
+                <button type="submit" id="run" class="btn btn-success">Run</button>
+            </form>
         </div>
+
+
         <div class="col d-flex flex-column rounded bg-dark px-4">
             <div>
                 <label for="Input" class="text-light">Input</label>
-                <textarea type="text" class="form-control" aria-label="Last name"></textarea>
+                <textarea type="text" id="intput" name="input" class="form-control" aria-label="Last name"></textarea>
             </div>
             <div>
                 <label for="Output" class="text-light">Output</label>
-                <textarea type="text" class="form-control" aria-label="Last name"></textarea>
+                <textarea type="text" id="output" name="output" class="form-control" aria-label="Last name"></textarea>
             </div>
         </div>
+
+        
     </div>
 
 </body>
@@ -55,6 +62,18 @@
         autoCloseBrackets: true
     })
     var width = window.innerWidth
+    var input = document.getElementById("input");
+    var output = document.getElementById("output");
+    var run = document.getElementById("run");
     editor.setSize(0.7*width, "500")
+
+    var code;
+    // run.addEventListener("click", async function(){
+    //     code = {
+    //         code:editor.getValue(),
+    //         language:"py",
+    //         input:""
+    //     }
+    // });
 </script>
 </html>
