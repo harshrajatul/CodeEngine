@@ -1,0 +1,49 @@
+* {
+    margin:  0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+
+}
+body {
+     
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(210, 203, 203, 0.637);
+    background-image: url('resources/image3.jpg');  
+    background-size : cover;
+    background-position: cover;
+
+}
+.box {
+    
+    background-color: cyan;
+
+    position: left;
+    width: 300px;
+    height: 300px;
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     
+     
+}
+
+.box form {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding : 0 40px;
+    
+}
+.box form h2 {
+    font-weight: 600;
+
+}
