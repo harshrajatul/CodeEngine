@@ -39,22 +39,21 @@ const express = require('express');
 const axios = require('axios');
 const qs = require('qs');
 const path = require("path");
+const cors = require('cors');
 
 const app = express();
 const PORT = 3000;
 
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 
 
-app.use("/codemirror-5.65.16",express.static(path.join(__dirname, "codemirror-5.65.16")))
+app.use("http://localhost:5173/codemirror-5.65.16",express.static(path.join(__dirname, "codemirror-5.65.16")))
 
 
 
-app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "index.html"));
-})
 
 app.post('/compile', async (req, res) => {
   try {
@@ -62,7 +61,7 @@ app.post('/compile', async (req, res) => {
 
     const code = req.body.code;
     const language = "cpp";
-    const input = "";
+    const input = req.body.input;
 
     const requestData = qs.stringify({
       code,
@@ -78,7 +77,7 @@ app.post('/compile', async (req, res) => {
       },
       data: requestData,
     };
-
+    
     const response = await axios(config);
     res.json(response.data);
 
