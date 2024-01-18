@@ -5,7 +5,7 @@ const axios = require('axios');
 const qs = require('qs');
 const path = require("path");
 const cors = require('cors');
-
+const db=require('./database');
 const app = express();
 const PORT = 3000;
 
@@ -17,7 +17,6 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/codemirror-5.65.16",express.static(path.join(__dirname, "codemirror-5.65.16")))
 
-var request = require('request');
 
 
 app.post('/compile', async (req, res) => {
