@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    background-image:url('../images/image.jpg');
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+     
+    background-image: url('resources/image3.jpg');
+    background-size: cover;
+    background-position: cover;
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+     
+    background-color: rgba(255, 255, 255, 0.062);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.52);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+    width:  fit-content;
+    height: 300px;
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.box form {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 40px;
+}
+
+.box h2 {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+}
+.box .input-box input{
+    position: relative;
+     
+    width: 100%;
+    color: rgba(255, 255, 255, 0.153);
+    background-color: rgba(56, 68, 68, 0.292);
+    border-radius: 5px;
+     
+     
+    padding: 8px 10px;
+}
+
+.box .input-box {
+    position: relative;
+    padding: 10px 15px;
+    width: 100%;
+    color: rgb(255, 255, 255);
+     
+     
+}
+
+.box #btn {
+    font-weight: bold;
+    background-color: transparent;
+    position: relative;
+    width: auto;
+     
+    border-radius: 10px;
+    cursor: pointer;
+     
+    background-color: rgba(26, 19, 19, 0.148);
+    outline: none;
+}
+
+.box  .group {
+    width:100%;
+    display: flex;
+    justify-content : space-between;
+}
+.box  .group a {
+    
+    font-size: 0.7rem;
+    color: white;
+    text-decoration: none; 
+     
+}
