@@ -1,0 +1,49 @@
+.header {
+  text-align: center;
+}
+
+.footer {
+  bottom: 0;
+  left:0;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+
+.footer p {
+  margin:5px 0;
+}
+
+.form {
+  text-align: center;
+  display: inline-block;
+  position:relative;  
+  top: 70px;
+  padding: 50px;
+  transition: width 0.5s ease, height 0.5s ease;
+background: transparent;
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(10.9px);
+-webkit-backdrop-filter: blur(10.9px);
+border: 1px solid rgba(15, 153, 255, 1);
+}
+
+.form p:hover {
+  color: blue;
+  cursor: pointer;
+}
+
+.form input {
+  display: block;
+  margin: 10px 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image:url("D:/WebDev/Project/disco/public/background.jpg");
+  background-size:cover;
+  background-position: center;
+}
